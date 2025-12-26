@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project_aa/screen/register.dart';
+import 'package:project_aa/screen/spalsh.dart';
 import 'package:project_aa/utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -60,13 +62,23 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(width: 8,),
-                    Text(
-                      '회원가입',
-                      style: TextStyle(
-                        color: Color(0xff4A2E1F),
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
+                    SizedBox(
+                      width: 8,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => RegisterScreen(),),
+                        );
+                      },
+                      child: Text(
+                        '회원가입',
+                        style: TextStyle(
+                          color: Color(0xff4A2E1F),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                   ],
