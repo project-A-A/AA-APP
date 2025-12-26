@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_aa/screen/login.dart';
 import 'package:project_aa/screen/spalsh.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'NotoSansKR',
       ),
       debugShowCheckedModeBanner: false,
-      home: SpalshScreen()
+      home: LoginScreen()
     );
   }
 }
