@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_aa/screen/profile_setting/profile_intro.dart';
 import 'package:project_aa/utils/utils.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -201,7 +202,12 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
               SizedBox(height: 40),
               GestureDetector(
                 onTap: () {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileIntroScreen(),
+                    ),
+                  );
                 },
                 child: Container(
                   width: double.infinity,
