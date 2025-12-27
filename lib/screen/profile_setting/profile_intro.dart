@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_aa/screen/profile_setting/profile_keyword.dart';
 
 class ProfileIntroScreen extends StatefulWidget {
   const ProfileIntroScreen({super.key});
@@ -111,7 +112,12 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
               GestureDetector(
                 onTap: () {
                   // 다음 단계로 이동하는 로직
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => NextScreen()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileKeywordScreen(),
+                    ),
+                  );
                 },
                 child: Container(
                   width: double.infinity,
@@ -195,7 +201,8 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                 borderSide: BorderSide.none,
                 borderRadius: BorderRadius.circular(16),
               ),
-              hintText: '예) 안녕하세요! 스타트업에서 프로덕트 디자이너로 일하고 있습니다. 디자인과 UX에 관심 있는 분들과 커피챗 나누고 싶어요.',
+              hintText:
+                  '예) 안녕하세요! 스타트업에서 프로덕트 디자이너로 일하고 있습니다. 디자인과 UX에 관심 있는 분들과 커피챗 나누고 싶어요.',
               hintStyle: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16,
@@ -304,4 +311,3 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
     super.dispose();
   }
 }
-

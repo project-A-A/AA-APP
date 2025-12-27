@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project_aa/screen/profile_setting/profile_info.dart';
-import 'package:project_aa/screen/profile_setting/profile_keyword.dart';
 import 'package:project_aa/utils/utils.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -121,7 +120,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ProfileKeywordScreen(),
+                          builder: (context) => ProfileInfoScreen(),
                         ),
                       );
                     },
