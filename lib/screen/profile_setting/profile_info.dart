@@ -202,7 +202,12 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
               SizedBox(height: 40),
               GestureDetector(
                 onTap: () {
-                  //profile_intro.dart
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileIntroScreen(),
+                    ),
+                  );
                 },
                 child: Container(
                   width: double.infinity,
