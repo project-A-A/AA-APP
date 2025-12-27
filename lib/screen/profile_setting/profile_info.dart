@@ -137,16 +137,16 @@ class _ProfileInfoScreenState extends State<ProfileInfoScreen> {
                       ),
                       child: _profileImage != null
                           ? ClipOval(
-                              child: Image.file(
-                                _profileImage!,
-                                fit: BoxFit.cover,
-                              ),
-                            )
+                        child: Image.file(
+                          _profileImage!,
+                          fit: BoxFit.cover,
+                        ),
+                      )
                           : Icon(
-                              Icons.person,
-                              size: 60,
-                              color: Color(0xffC4C4C4),
-                            ),
+                        Icons.person,
+                        size: 60,
+                        color: Color(0xffC4C4C4),
+                      ),
                     ),
                     Positioned(
                       right: 0,
