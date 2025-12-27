@@ -118,12 +118,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     //       }
                     //     : null,
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ProfileKeywordScreen(),
-                        ),
-                      );
                     },
                     child: Container(
                       width: 329,
