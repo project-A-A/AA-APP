@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_aa/screen/profile_setting/profile_info.dart';
 import 'package:project_aa/utils/utils.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -99,21 +100,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     children: [
                       Checkbox(
                         value: privacyAgreed,
-                        onChanged: (val) => setState(() => privacyAgreed = val!),
                         activeColor: Color(0xff4A2E1F),
+                        onChanged: (val) =>
+                            setState(() => privacyAgreed = val!),
                       ),
                       const Text('[필수] 개인정보 처리방침에 동의합니다'),
                     ],
                   ),
                   SizedBox(height: 20),
                   GestureDetector(
-                    onTap: (termsAgreed && privacyAgreed)
-                        ? () {
-                            if (_formKey.currentState!.validate()) {
-                              // TODO: 실제 회원가입 로직 작성
-                            }
-                          }
-                        : null,
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileInfoScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       width: 329,
                       height: 56,
@@ -144,4 +147,3 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 }
-
